@@ -23,10 +23,6 @@ public class MovieSpecificationImpl implements Specification<Movie> {
         list.add(criteria);
     }
 
-    public void addAll(List<SearchCriteria> criteria) {
-        list.addAll(criteria);
-    }
-
     @Override
     public Predicate toPredicate(Root<Movie> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
         List<Predicate> predicates = new ArrayList<>();
